@@ -6,11 +6,11 @@ class Game {
     public Game(String answer) {
         this.answer = answer;
 	hits = "";
-	misses ="";
+	misses = "";
     } // end of Game contrusctor
 
     public boolean applyGuess(char letter) {
-	    boolean isHit = answer.indexOf(letter) ! = -1;
+	    boolean isHit = answer.indexOf(letter) != -1;
 	    if (isHit) {
 		    hits += letter;
 
