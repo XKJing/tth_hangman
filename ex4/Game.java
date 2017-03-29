@@ -11,11 +11,19 @@ public class Game {
 		misses = "";
 	}
 
+        private char normalizeGUess(char letter) {
+	    if (! Character.isletter(letter)) {
+		throw new IllegalArgumentException("A letter is required");
+	    }
+	    letter = Character.toLowerCase(letter);
+	    if (misses.indexOf(letter) !=-1 || hits.indexOf(letter) != -1) {
+		throw new IllegalArgumentException(letter + "has already been guessed");
+	    }
+	    return letter;
+        }
+
 	public boolean application(char letter) {
-		if (misses.indexOf(letter) !=-1 || hits.indexOf(letter) != -1) {
-			throw new IllegalArgumentException(letter + "has already been guessed");
-		}
-		
+		letter = normalizaGuess(letter);
 		//raise Exeption 
 		boolean isHit = answer.indexOf(letter) != -1;
 		if (isHit) {

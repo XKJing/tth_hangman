@@ -10,13 +10,13 @@ public class Hangman {
 		
 		}
 		
-		//boolean isHit = prompter.promterForGuess();
+		//boolean isHit = prompter.prompterForGuess();
 		
 		/*if (isHit) {
 			System.out.println("We got a hit!");
 			
 		} else {
-			System.out.println("Oops missed£¡")£»
+			System.out.println("Oops missed!");
 		}
 		prompter.displayProgress();**/
 	}
